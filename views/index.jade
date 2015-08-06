@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  #content
+    - if (isLogged)
+      include ./logged
+    - else
+      #head
+        #right-login
+          table
+            tr
+              td
+                p #{locale.index.welcome} #{little_title}
+              td
+                include ./forms/login
+      include ./notlogged
+    #foot
+      p #{locale.index.more_information} 
+        a(href='') #{locale.global.clic_here}
+
+    

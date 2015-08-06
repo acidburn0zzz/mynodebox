@@ -1,0 +1,54 @@
+script(type='text/javascript', src='/javascripts/scripts/header.script.js')
+#header
+  ul
+    li
+     a(href="/", data-nav="front")
+       #title= title
+       #subtitle= subtitle
+  - if (isLogged)
+    #second_header_params
+      ul
+        li#menuparams
+          span= locale.header.params
+          span.showico v
+          ul
+            li.right-caret
+              span.caret-inner
+            li.param
+              a(href="#") #{locale.header.show_profile}
+            li.param
+              a(href="#") #{locale.header.change_password}
+            li.param
+              a(href="/disconnect") #{locale.header.disconnect}
+     #second_header_notifications
+      ul
+        li#menunotifications
+          span#notifications= 0
+          ul
+            li.right-caret-notif
+              span.caret-inner
+            li.notif
+              a(href="#") #{locale.notifications.no_notification}
+            li.notif.notiflist
+              a(href="/notifications") #{locale.notifications.see_notifications}
+     #second_header_profil
+      span= messagelogged
+        |  
+      span#username= username
+     
+  - else
+    #second_header_language
+      ul
+        li#selectlanguage
+          span #{locale.header.language} : 
+          span= language.selected
+           |  
+          span.showico v
+          ul
+            li.right-caret
+              span.caret-inner
+            for item in language.list
+              li.lang
+                a(href="/lang/" + item) #{item}
+          
+          

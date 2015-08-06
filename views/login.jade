@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  #content
+    #badlogin
+      #error_login_message.error
+        p #{login_message}
+      include ./forms/badlogin
+    p 
+      a(href="/") #{locale.global.back}
+
+    

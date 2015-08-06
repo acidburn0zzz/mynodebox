@@ -1,0 +1,42 @@
+script(type='text/javascript', src='/javascripts/scripts/fileslist.script.js')
+table#fileslisttable
+  tr
+    td#leftside
+      #myfolders.root_folder 
+        div.root_folder_div.folder.show= locale.fileslist.myfiles
+        div.sub_folder 
+          div.sub_folder_div.folder Mon dossier1
+        div.sub_folder 
+          div.sub_folder_div.folder.show Mon dossier2
+          div.sub_folder 
+            div.sub_folder_div.folder Mon sous dossier1
+          div.sub_folder 
+            div.sub_folder_div.folder Mon sous dossier2
+        div.sub_folder 
+          div.sub_folder_div.folder Mon dossier3
+      #sharedfolders.root_folder 
+        div.root_folder_div.folder.show= locale.fileslist.mysharedfiles
+        div.sub_folder 
+          div.sub_folder_div.folder Mon dossier partage1
+        div.sub_folder 
+          div.sub_folder_div.folder Mon dossier partage2
+    td#fileslist
+      #divfilelist
+        table#filesexplorer
+          thead
+            tr
+              td.filesheader= locale.fileslist.filename
+              td.filesheader= locale.fileslist.filesize
+              td.filesheader= locale.fileslist.filetype
+              td.filesheader= locale.fileslist.filedatemodif
+          tbody
+            tr
+              td Mon fichier.pdf
+              td "2.5 Mo"
+              td fichier PDF
+              td 21/02/2013 21:43
+            tr
+              td Mon autre fichier.pdf
+              td "3 Mo"
+              td fichier PDF
+              td 19/02/2013 15:23

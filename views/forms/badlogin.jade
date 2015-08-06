@@ -1,0 +1,28 @@
+form(action="/login", method="post", enctype="multipart/form-data", autocomplete)
+  table
+    tr
+      td
+        label #{locale.login.login}
+      td
+        input.input(type="input", name='login_login', required)
+    tr
+      td
+        label #{locale.login.password}
+      td
+        input.input(type='password', name='login_password', required, autocomplete="off")
+    tr
+      td
+      td#button-submit
+        a(href='') #{locale.login.forgot_password}
+    tr
+      td#button-submit(colspan=2)
+        label
+          input.checkbox(type='checkbox', name='save_login', checked=true)
+          | #{locale.login.keep_login}
+    tr
+      td#button-submit(colspan=2)
+        input.submit(type='submit', value=locale.login.authenticate)
+
+  
+  
+     

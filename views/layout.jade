@@ -1,0 +1,15 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/menu.css')
+    link(rel='stylesheet', href='/stylesheets/fileslist.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    script(type='text/javascript', src='/javascripts/jquery/jquery-1.9.1.min.js')
+    script(type='text/javascript', src='/javascripts/locale/' + language.code + '.js')
+  body
+    include ./header
+    #prevcontent
+      block content
+      #copyright Powered By NodeJS/#{little_title} &copy; 2013 Thomas Payen

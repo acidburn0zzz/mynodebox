@@ -1,0 +1,5 @@
+#search_file
+  form(action="/search", method="post", enctype="multipart/form-data", autocomplete)
+    label= locale.fileslist.filesearch
+    input.input(type="search", id="search_file_input", name='search_file', required)
+    input.submit(type='submit', value=locale.fileslist.filesearchsubmit)

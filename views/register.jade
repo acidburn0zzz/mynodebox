@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  #content
+    #head
+      #right-login
+        table
+          tr
+            td
+              p #{locale.index.welcome} #{little_title}
+            td
+              include ./forms/login
+    p #{register_message}
+    a(href="/") #{locale.global.back}
+
+    

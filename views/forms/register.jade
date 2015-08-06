@@ -1,0 +1,32 @@
+script(type='text/javascript', src='/javascripts/scripts/register.script.js')
+script(type='text/javascript', src='/javascripts/ajax/register.ajax.js')
+h3 #{locale.register.head}
+form(action="/register", id="formregister", method="post", enctype="multipart/form-data", autocomplete)
+table#tableregister
+  tr
+    td
+      input.input(type='input', form="formregister", id='register_name', name='register_name', placeholder=locale.register.name, required)
+    td#td_register_name_message.input_message_register
+      
+  tr
+    td 
+      input.input(type='input', form="formregister", id='register_login', name='register_login', placeholder=locale.register.login, required)
+    td#td_register_login_message.input_message_register
+      
+  tr
+    td
+      input.input(type='password', form="formregister", id='register_password', name='register_password', placeholder=locale.register.password, required, autocomplete="off")
+      #div_register_password_border
+        #div_register_password
+    td#td_register_password.input_message_register
+      
+  tr
+    td 
+      input.input(type='email', form="formregister", id='register_email', name='register_email', placeholder=locale.register.email, required)
+    td#td_register_email.input_message_register
+      
+   tr
+    td#button-submit
+      input.submit(type='submit', form="formregister", id='submit_register', value=locale.register.register)
+      
+ 
