@@ -5,7 +5,7 @@
 exports.driver = "redis/redis.js";
 
 // Host for the database connexion
-exports.host = "mondyndnsamoi.dyndns.org";
+exports.host = "";
 
 // Port for the database connexion
 exports.port = "6379";
@@ -14,4 +14,4 @@ exports.port = "6379";
 exports.user = "";
 
 // Password for the database connexion 
-exports.password = "MyR3d!sP4$$w0rd?";
+exports.password = "";
